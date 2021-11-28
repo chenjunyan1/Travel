@@ -55,8 +55,10 @@
 .img_all>div>div>div{
   display: flex;
   justify-content: center;
+
 }
 .img_all>div>div>div>div{
+  max-width: 177px;
   padding: 10px;
   background: black;
   color: white;
@@ -70,6 +72,7 @@
   font-family: fantasy;
   font-weight: 700;
 }
+
 @media only screen and (min-width: 650px) {
   .riqi{
     display: flex;
@@ -79,6 +82,9 @@
   }
   .img_all>div>div>img{
     width: 45%;
+  }
+  .img_all>div>div>div>div{
+    max-width: 400px;
   }
   .page_end{
     font-size: 27px;

@@ -6,6 +6,7 @@ import Typography from '@mui/material/Typography';
 import Box from '@mui/material/Box';
 import ButtonGroup from '@mui/material/ButtonGroup';
 import Button from '@mui/material/Button';
+import Data from './data.json'
 
 function num_img(data, num) {
   let arr = [];
@@ -102,10 +103,10 @@ export default class App extends Component {
             >
               <Button
                 onClick={this.handclick.bind(this, 1)}
-              >2021.10.21</Button>
+              >2021.10.22</Button>
               <Button
                 onClick={this.handclick.bind(this, 2)}
-              >2021.10.22</Button>
+              >2021.10.23</Button>
             </ButtonGroup>
             <ButtonGroup disableElevation
               variant="contained"
@@ -114,10 +115,10 @@ export default class App extends Component {
             >
               <Button
                 onClick={this.handclick.bind(this, 3)}
-              >2021.10.23</Button>
+              >2021.10.24</Button>
               <Button
                 onClick={this.handclick.bind(this, 4)}
-              >2021.10.24</Button>
+              >2021.10.25</Button>
             </ButtonGroup>
           </div>
         </div>
@@ -130,8 +131,8 @@ export default class App extends Component {
                 console.log(num == 1)
                 return (
                   <div key={index}>
+                    {(Data[22][index] != "") ? (<div><div>{Data[22][index]}</div></div>) : null}
                     <img src={item} alt="xxn" />
-                    <div><div>来到深圳的第一晚</div></div>
                   </div>
                 )
               })
@@ -144,8 +145,8 @@ export default class App extends Component {
                 console.log(num == 2)
                 return (
                   <div key={index}>
+                    {(Data[23][index] != "") ? (<div><div>{Data[23][index]}</div></div>) : null}
                     <img src={item} alt="xxn" />
-                    <div><div>晚饭后开始遛弯</div></div>
                   </div>
                 )
               })
@@ -153,7 +154,11 @@ export default class App extends Component {
             </div>) : null}
           {/* 10_24 */}
           {(num == 3) ? (
+
             <div>
+              <div>
+                <img src="ShenZhen/Chen_junyan.jpg" />
+              </div>
               {num_img("10_24", 61).map((item, index) => {
                 console.log(num == 3)
                 return (
