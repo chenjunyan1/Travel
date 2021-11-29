@@ -132,7 +132,7 @@ export default class App extends Component {
                 return (
                   <div key={index}>
                     {(Data[22][index] != "") ? (<div><div>{Data[22][index]}</div></div>) : null}
-                    <img src={item} alt="xxn" />
+                    <img src={item} alt="照片正在路上" />
                   </div>
                 )
               })
@@ -146,7 +146,7 @@ export default class App extends Component {
                 return (
                   <div key={index}>
                     {(Data[23][index] != "") ? (<div><div>{Data[23][index]}</div></div>) : null}
-                    <img src={item} alt="xxn" />
+                    <img src={item} alt="照片正在路上" />
                   </div>
                 )
               })
@@ -154,16 +154,15 @@ export default class App extends Component {
             </div>) : null}
           {/* 10_24 */}
           {(num == 3) ? (
-
             <div>
               <div>
-                <img src="ShenZhen/Chen_junyan.jpg" />
+                <img src="ShenZhen/Chen_junyan.jpg" alt="照片正在路上" />
               </div>
               {num_img("10_24", 61).map((item, index) => {
                 console.log(num == 3)
                 return (
                   <div key={index}>
-                    <img src={item} alt="xxn" />
+                    <img src={item} alt="照片正在路上" />
                     <div><div>俊雁同学参加2021界学生开源年会</div></div>
                   </div>
                 )
@@ -177,7 +176,7 @@ export default class App extends Component {
                 console.log(num == 4)
                 return (
                   <div key={index}>
-                    <img src={item} alt="xxn" />
+                    <img src={item} alt="照片正在路上" />
                     <div><div>在深圳的最后一天[海边]</div></div>
                   </div>
                 )
