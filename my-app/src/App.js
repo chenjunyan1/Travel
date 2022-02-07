@@ -14,7 +14,8 @@ function num_img(data, num) {
   }
   return arr;
 }
-let scrollTop;
+
+// let scrollTop;
 
 
 export default class App extends Component {
@@ -22,25 +23,33 @@ export default class App extends Component {
     super(props)
 
     this.state = {
-      num: "null"
+      num: "null",
+      loading: false
       // scrollTop_1: 0
 
     }
 
   }
-
+  // axios.get('./img')
+  gitImg(src) {
+    // axios.get(src).then((date)=>{
+    //   this.setState({
+    //     loading:true
+    //   })
+    // })
+  }
   componentDidMount() {
-    this.scrollTop = window.onscroll = function () {
-      //为了保证兼容性，这里取两个值，哪个有值取哪一个
-      //scrollTop就是触发滚轮事件时滚轮的高度
-      scrollTop = document.documentElement.scrollTop || document.body.scrollTop;
-      if (scrollTop > 500) {
-        console.log("滚动距离" + scrollTop);
-        // this.setState({
-        //   scrollTop_1: [scrollTop]
-        // })hg
-      }
-    }
+    // this.scrollTop = window.onscroll = function () {
+    //   //为了保证兼容性，这里取两个值，哪个有值取哪一个
+    //   //scrollTop就是触发滚轮事件时滚轮的高度
+    //   scrollTop = document.documentElement.scrollTop || document.body.scrollTop;
+    //   if (scrollTop > 500) {
+    //     console.log("滚动距离" + scrollTop);
+    //     // this.setState({
+    //     //   scrollTop_1: [scrollTop]
+    //     // })hg
+    //   }
+    // }
   }
   handclick(num) {
     this.setState({
@@ -149,7 +158,7 @@ export default class App extends Component {
                     zIndex: 'modal',
                   }}
                 >
-                  ChenJunYan
+                  ChenJunYan &amp;
                 </Box>
               </Typography>
             </div>
@@ -186,24 +195,18 @@ export default class App extends Component {
         {/* 10_22 */}
         <div className="img_all">
           {(num == 1) ? (
-            <Suspense fallback={
-              <div className='load'>
-                <div>11111111111111111111111111111111111111111111111</div>
-              </div>}>
-              <div>
-                {num_img("10_22", 6).map((item, index) => {
-                  console.log(num == 1)
-                  return (
-                    <div key={index}>
-                      {(Data[22][index] != "") ? (<div><div>{Data[22][index]}</div></div>) : null}
-                      <img src={item} alt="照片正在路上" />
-                    </div>
-                  )
-                })
-                }
-              </div>
-            </Suspense>
-          ) : null}
+            <div>
+              {num_img("10_22", 6).map((item, index) => {
+                console.log(num == 1)
+                return (
+                  <div key={index}>
+                    {(Data[22][index] != "") ? (<div><div>{Data[22][index]}</div></div>) : null}
+                    <img src={item} alt="照片正在路上" />
+                  </div>
+                )
+              })
+              }
+            </div>) : null}
           {/* 10_23 */}
           {(num == 2) ? (
             <div>
@@ -255,10 +258,11 @@ export default class App extends Component {
           Wonderland © Website 2021
         </div>
         {
-          (scrollTop > 500) ? (
-            <div className="zhiding">
-              <img onClick={this.topping.bind(this)} src="Character/置顶.svg" />
-            </div>) : null
+          // (scrollTop > 500) ? (
+          <div className="zhiding">
+            <img onClick={this.topping.bind(this)} src="Character/置顶.svg" />
+          </div>
+          // ) : null
         }
       </div >
 
