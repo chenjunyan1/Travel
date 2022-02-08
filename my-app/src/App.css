@@ -111,5 +111,9 @@ body{
   }
 }
 
+.yinpin{
+  display: flex;
+  justify-content: center;
+}
 
 

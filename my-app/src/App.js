@@ -24,7 +24,8 @@ export default class App extends Component {
 
     this.state = {
       num: "null",
-      loading: false
+      loading: false,
+      // Audio: "true"
       // scrollTop_1: 0
 
     }
@@ -38,7 +39,17 @@ export default class App extends Component {
     //   })
     // })
   }
+
+  // 生命周期开始
   componentDidMount() {
+    // this.frequency();
+
+    // this.timerID = setInterval(
+    //   () => this.frequency(),
+    //   1000
+    // );
+    // setInterval(this.frequency(), 10000);  
+
     // this.scrollTop = window.onscroll = function () {
     //   //为了保证兼容性，这里取两个值，哪个有值取哪一个
     //   //scrollTop就是触发滚轮事件时滚轮的高度
@@ -50,6 +61,17 @@ export default class App extends Component {
     //     // })hg
     //   }
     // }
+  }
+  // 生命周期结束
+  componentWillUnmount() {
+    // clearInterval(this.timerID);
+  }
+
+  frequency() {
+    this.setState({
+      Audio: "autoplay"
+    })
+    console.log("转换");
   }
   handclick(num) {
     this.setState({
@@ -63,6 +85,7 @@ export default class App extends Component {
       anchorElement.scrollIntoView({ behavior: "smooth", });
     }
   }
+
 
   // ScrollTop(props) {
   //   const { children, window } = props;
@@ -163,6 +186,9 @@ export default class App extends Component {
               </Typography>
             </div>
           </div>
+        </div>
+        <div className='yinpin'>
+          <audio id="vd" loop src="xiaojiuwo.mp3"  controls="controls"></audio>
         </div>
         {/* button 日期 */}
         <div className="page_2">
