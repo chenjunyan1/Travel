@@ -188,7 +188,7 @@ export default class App extends Component {
           </div>
         </div>
         <div className='yinpin'>
-          <audio controlsList="nodownload" oncontextmenu="return false" id="vd" loop src="xiaojiuwo.mp3"  controls="controls"></audio>
+          <audio controlsList="nodownload" oncontextmenu="return false" id="vd" loop src="xiaojiuwo.mp3" controls="controls"></audio>
         </div>
         {/* button 日期 */}
         <div className="page_2">
