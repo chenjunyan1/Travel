@@ -1,52 +1,46 @@
 body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+    margin: 0;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue', sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
 }
-.load{
-  width: 100%;
-  height: 100vh;
-  display: flex;
-  justify-content: center;
-  align-content: center;
-  flex-direction: column;
-  flex-wrap: wrap;
+
+.load {
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    flex-direction: column;
+    flex-wrap: wrap;
 }
 
 .pulsing-3 {
-  width: 90px;
-  height: 90px;
-  color: #dc1818;
-  background:
-      radial-gradient(circle at 60% 65%, currentColor 62%, #0000 65%) top left,
-      radial-gradient(circle at 40% 65%, currentColor 62%, #0000 65%) top right,
-      linear-gradient(to bottom left, currentColor 42%, #0000 43%) bottom left,
-      linear-gradient(to bottom right, currentColor 42%, #0000 43%) bottom right;
-  background-size: 50% 50%;
-  background-repeat: no-repeat;
-  position: relative;
+    width: 90px;
+    height: 90px;
+    color: #dc1818;
+    background: radial-gradient(circle at 60% 65%, currentColor 62%, #0000 65%) top left, radial-gradient(circle at 40% 65%, currentColor 62%, #0000 65%) top right, linear-gradient(to bottom left, currentColor 42%, #0000 43%) bottom left, linear-gradient(to bottom right, currentColor 42%, #0000 43%) bottom right;
+    background-size: 50% 50%;
+    background-repeat: no-repeat;
+    position: relative;
 }
 
 .pulsing-3:after {
-  content: "";
-  position: absolute;
-  inset: 0;
-  background: inherit;
-  opacity: 0.4;
-  animation: pl3 1s infinite;
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: inherit;
+    opacity: 0.4;
+    animation: pl3 1s infinite;
 }
 
 @keyframes pl3 {
-  to {
-      transform: scale(1.8);
-      opacity: 0
-  }
+    to {
+        transform: scale(1.8);
+        opacity: 0
+    }
 }
 
 code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+    font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New', monospace;
 }
