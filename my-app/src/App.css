@@ -1,127 +1,144 @@
-body{
-  -webkit-touch-callout: none; /* iOS Safari */
-  -webkit-user-select: none; /* Chrome/Safari/Opera */
-  -khtml-user-select: none; /* Konqueror */
-  -moz-user-select: none; /* Firefox */
-  -ms-user-select: none; /* Internet Explorer/Edge */
-  user-select: none; /* Non-prefixed version, currently not supported by any browser */
-  }
+body {
+    -webkit-touch-callout: none;
+    /* iOS Safari */
+    -webkit-user-select: none;
+    /* Chrome/Safari/Opera */
+    -khtml-user-select: none;
+    /* Konqueror */
+    -moz-user-select: none;
+    /* Firefox */
+    -ms-user-select: none;
+    /* Internet Explorer/Edge */
+    user-select: none;
+    /* Non-prefixed version, currently not supported by any browser */
+}
 
-.page_1{
-  width: 100%;
-  height: 100vh;
-  display: flex;
-  flex-wrap: wrap;
-  flex-direction: column;
-  justify-content: center;
-  background-image: url(../src/img/beizhan.jpg);
-  background-size: cover;
-  background-position: center top;
-  background-repeat: no-repeat;
-  transition: all 1s;
-}
-.we{
-  display: flex;
-  justify-content: space-evenly;
-  padding-top: 20px;
-  padding-bottom: 20px;
-}
-.riqi{
-  display: flex;
-  flex-wrap: wrap;
-  flex-direction: column;
-  align-content: center;
-}
-.riqi>*{
-  margin-top: 10px;
-  margin-bottom: 10px;
-}
-.title{
-  text-align: center;
-  font-size: 26px;
-  font-weight: 900;
-  color: aliceblue;
-  transition: all 1s;
-}
-.img_all>div>div{
-  display: flex;
-  justify-content: center;
-  flex-direction: column;
-  align-content: center;
-  flex-wrap: wrap;
-  border-radius:20px ;
-}
-.img_all>div>div>img{
-  width: 80%;
-  border-radius: 20px;
-  margin-bottom: 20px;
-  transition: all 1s;
-}
-.img_all>div>div>img:hover{
-  transform: scale(1.1);
-  box-shadow: 10px 10px 5px #dbe2ef;
-}
-.img_all>div>div>div{
-  display: flex;
-  justify-content: center;
-
-}
-.img_all>div>div>div>div{
-  max-width: 177px;
-  padding: 10px;
-  background: black;
-  color: white;
-  border-radius: 50px;
-  margin-bottom: 10px;
-}
-.page_end{
-  display:flex;
-  justify-content: center;
-  font-size: 17px;
-  font-family: fantasy;
-  font-weight: 700;
-}
-.zhiding>img{
-  width: 50px;
-  bottom: 33px;
-  right: 33px;
-  position: fixed;
-  border-radius: 50%;
-  box-shadow: 4px 3px 7px royalblue;  
-}
-@media only screen and (min-width: 900px) {
-  .riqi{
+.page_1 {
+    width: 100%;
+    height: 100vh;
     display: flex;
-    flex-wrap: nowrap;
-    flex-direction: row;
-    align-content: center;
-  }
-  .img_all>div>div>img{
-    width: 45%;
-  }
-  .img_all>div>div>div>div{
-    max-width: 400px;
-  }
-  .page_end{
-    font-size: 27px;
-    font-weight: 900;
-  }
-  .title{
-    font-size: 66px;
-  }
+    flex-wrap: wrap;
+    flex-direction: column;
+    justify-content: center;
+    background-image: url(../src/img/beizhan.jpg);
+    background-size: cover;
+    background-position: center top;
+    background-repeat: no-repeat;
+    transition: all 1s;
 }
 
-.yinpin{
-  display: flex;
-  justify-content: center;
+.we {
+    display: flex;
+    justify-content: space-evenly;
+    padding-top: 20px;
+    padding-bottom: 20px;
+}
+
+.riqi {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    align-content: center;
+}
+
+.riqi>* {
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+.title {
+    text-align: center;
+    font-size: 26px;
+    font-weight: 900;
+    color: aliceblue;
+    transition: all 1s;
+}
+
+.img_all>div>div {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-content: center;
+    flex-wrap: wrap;
+    border-radius: 20px;
+}
+
+.img_all>div>div>img {
+    width: 80%;
+    border-radius: 20px;
+    margin-bottom: 20px;
+    transition: all 1s;
+}
+
+.img_all>div>div>img:hover {
+    transform: scale(1.1);
+    box-shadow: 10px 10px 5px #dbe2ef;
+}
+
+.img_all>div>div>div {
+    display: flex;
+    justify-content: center;
+}
+
+.img_all>div>div>div>div {
+    max-width: 177px;
+    padding: 10px;
+    background: black;
+    color: white;
+    border-radius: 50px;
+    margin-bottom: 10px;
+}
+
+.page_end {
+    display: flex;
+    justify-content: center;
+    font-size: 17px;
+    font-family: fantasy;
+    font-weight: 700;
+}
+
+.zhiding>img {
+    width: 50px;
+    bottom: 33px;
+    right: 33px;
+    position: fixed;
+    border-radius: 50%;
+    box-shadow: 4px 3px 7px royalblue;
+}
+
+@media only screen and (min-width: 900px) {
+    .riqi {
+        display: flex;
+        flex-wrap: nowrap;
+        flex-direction: row;
+        align-content: center;
+    }
+    .img_all>div>div>img {
+        width: 45%;
+    }
+    .img_all>div>div>div>div {
+        max-width: 400px;
+    }
+    .page_end {
+        font-size: 27px;
+        font-weight: 900;
+    }
+    .title {
+        font-size: 66px;
+    }
+}
+
+.yinpin {
+    display: flex;
+    justify-content: center;
 }
 
 audio::-webkit-media-controls {
-  overflow: hidden !important
-  }
-  /* audio::-webkit-media-controls-enclosure {
+    overflow: hidden !important
+}
+
+
+/* audio::-webkit-media-controls-enclosure {
   width: calc(100% + 32px);
 　margin-left: auto;
   } */
-
-
